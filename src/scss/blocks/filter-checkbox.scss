@@ -1,0 +1,165 @@
+.filter-checkbox {
+  padding: 0;
+  border: 0;
+}
+
+.filter-checkbox__title {
+  width: 250px;
+
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #d22856;
+  line-height: 30px;
+}
+
+.filter-checkbox__list {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.filter-checkbox__item {
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  margin: 0px;
+  margin-bottom: 40px;
+  padding-left: 60px;
+  padding-top: 6px;
+
+
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+
+  &:last-child {
+    margin-bottom: 10px;
+  }
+}
+
+.filter-checkbox__label {
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+
+    top: 0;
+    left: 0;
+    width: 39px;
+    height: 39px;
+  }
+
+  &:hover {
+
+    &::before {
+      border-color: #283645;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: #d22856;
+    }
+  }
+}
+
+.filter-checkbox__input:checked + .filter-checkbox__label {
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 4px;
+    left: 15px;
+    width: 12px;
+    height: 22px;
+    border: 3px solid #d22856;
+    border-top: none;
+    border-left: none;
+    box-shadow: none;
+    transform: rotate(45deg);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter-checkbox__title {
+    width: 420px;
+  }
+
+  .filter-checkbox__list {
+    width: 320px;
+    padding: 25px 0;
+  }
+
+  .filter-checkbox__item {
+    margin: 0;
+    margin-bottom: 50px;
+    width: 100%;
+    min-width: 190px;
+    padding-left: 60px;
+    padding-top: 7px;
+  }
+
+  .filter-checkbox__label {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .filter-checkbox__label {
+    cursor: pointer;
+
+    &::before {
+      left: 10px;
+    }
+  }
+
+  .filter-checkbox__input:checked + .filter-checkbox__label {
+
+    &::after {
+      left: 25px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-checkbox {
+    padding: 10px 20px;
+  }
+
+  .filter-checkbox__title {
+      &::before {
+        left: 145px;
+        width: 280px;
+      }
+
+      &::after {
+        right: 145px;
+        width: 280px;
+      }
+  }
+
+  .filter-checkbox__list {
+    width: auto;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+
+  .filter-checkbox__item {
+    width: 33.33%;
+
+    &:nth-last-child(2),
+    &:nth-last-child(3) {
+      margin: 0;
+    }
+  }
+}

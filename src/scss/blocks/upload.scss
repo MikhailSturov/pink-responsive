@@ -1,0 +1,296 @@
+.upload__title {
+  width: 320px;
+  padding: 0;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.upload__wrapper {
+  width: 100%;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.upload__form {
+  padding-bottom: 40px;
+}
+
+.upload__image-wrapper {
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.upload__image {
+  width: 100%;
+  height: auto;
+}
+
+.upload__tools {
+  width: 240px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+.filter-tools__list {
+  position: relative;
+  padding-bottom: 72px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-tools__button {
+  position: relative;
+  margin-right: 16px;
+  margin-left: 16px;
+  width: 55px;
+  height: 55px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.photo-editor__tool-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  fill: rgba(40,54,69,.3);
+
+  &:hover {
+    fill: rgba(40,54,69,.5);
+  }
+
+  &:active {
+    fill: #d22856;
+  }
+
+  &--active {
+    fill: #d22856;
+  }
+}
+
+.filter-tools__range {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 28px;
+  background-color: #f2f2f2;
+
+  &--fill {
+    display: none;
+  }
+
+  &--contrast {
+    display: none;
+  }
+}
+
+.filter-tools__scale {
+  position: relative;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.filter-tools__bar {
+  height: 2px;
+  background-color: #283645;
+}
+
+.filter-tools__value {
+  height: 2px;
+}
+
+.filter-tools__pin {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #d22856;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+
+  &:active {
+    background-color: #d22856;
+  }
+}
+
+.upload-buttons {
+  position: relative;
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #dddfe0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+
+  .upload__title {
+    width: 660px;
+    font-size: 18px;
+  }
+
+  .upload__form {
+    display: flex;
+    justify-content: space-between;
+    width: 660px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .filter-tools__range {
+    position: relative;
+    background-color: #f2f2f2;
+    width: 100%;
+    padding-bottom: 0;
+
+    &--fill {
+      display: block;
+    }
+
+    &--contrast {
+      display: block;
+    }
+  }
+
+  .upload__image-wrapper {
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .upload__tools-wrapper {
+    width: 40%;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .upload__tools {
+    padding: 0;
+    margin: 0;
+    width: auto;
+  }
+
+  .filter-tools__list {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .filter-tools__item {
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 -1px #dddfe0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .filter-tools__button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .photo-editor__tool-icon {
+    width: 24px;
+    height: 24px;
+    fill: #d22856;
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .upload-buttons {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+  .upload__form {
+    width: 940px;
+  }
+
+  .upload__image-wrapper {
+    width: auto;
+    padding-left: 50px;
+  }
+
+  .upload__tools-wrapper {
+    width: 50%;
+    padding-right: 50px;
+  }
+
+  .filter-tools__item {
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 -1px #dddfe0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .filter-tools__button {
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+  }
+
+  .photo-editor__tool-icon {
+    width: 48px;
+    height: 48px;
+    fill: #d22856;
+
+    &--contrast {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .upload-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+
+

@@ -1,0 +1,109 @@
+.caption {
+  width: 320px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.caption__name {
+  font-weight: 700;
+
+  & span {
+    display: inline;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}
+
+.caption__text {
+  margin: 0;
+}
+
+.caption__rating {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.caption__rating-button {
+  width: 13px;
+  height: 12px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  text-indent: -1000px;
+  overflow: hidden;
+  background: url(../img/icon-heart.svg) no-repeat center;
+  background-size: 13px 12px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.caption__rating-text {
+  margin-left: 19px;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #d22856;
+  text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .caption {
+
+    &--panorama {
+      width: 660px;
+      padding: 25px;
+      margin-bottom: 40px;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .caption__name {
+
+    &--panorama {
+      order: -2;
+      flex-grow: 1;
+      margin-right: 20px;
+    }
+  }
+
+  .caption__text {
+
+    &--panorama {
+      flex-grow: 1;
+    }
+  }
+
+  .caption__rating {
+
+    &--panorama {
+      margin-top: 0;
+      order: -1;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+  .caption {
+    width: 300px;
+
+    &--panorama {
+      width: 960px;
+      padding-right: 30px;
+      padding-left: 30px;
+      margin-bottom: 50px;
+    }
+  }
+}
+

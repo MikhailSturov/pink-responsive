@@ -1,0 +1,108 @@
+.research {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .research {
+    display: block;
+  }
+
+  .research__wrapper {
+    width: 660px;
+    display: flex;
+    padding-top: 58px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+
+  .research__description {
+    position: relative;
+    padding-left: 50%;
+    padding-top: 40px;
+    padding-bottom: 23px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      width: 238px;
+      height: 276px;
+      background-image: url(../img/timer-tablet.png);
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+  }
+
+  .research__title {
+    max-width: 175px;
+    margin-top: 0;
+    margin-bottom: 9px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .research__paragraph {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .research__link {
+    margin: 0;
+    color: #d22856;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .research {
+    background: #f2f2f2;
+  }
+
+  .research__wrapper {
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+  }
+
+  .research__description {
+    position: relative;
+    padding-left: 45%;
+    padding-top: 0px;
+    padding-bottom: 60px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      width: 298px;
+      height: 345px;
+      background-image: url(../img/timer-desktop.png);
+    }
+  }
+
+  .research__title {
+    margin-bottom: 20px;
+    max-width: inherit;
+  }
+
+  .research__paragraph {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .research__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+}

@@ -1,0 +1,234 @@
+.price {
+  background-color: #f2f2f2;
+  padding-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat center top;
+    background-size: 100% 25px;
+    z-index: 0;
+  }
+}
+
+.price__wrapper {
+  position: relative;
+  padding-top: 91px;
+  padding-bottom: 46px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.price-table {
+  position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 262.5%;
+}
+
+.price-table__head {
+  position: relative;
+  background-color: #283645;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  padding-top: 17px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-clip: padding-box;
+
+  &:first-child {
+    background-color: transparent;
+  }
+
+  &--title {
+    display: none;
+  }
+
+  &--hit {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 74px;
+      height: 73px;
+      background: url(../img/bg-hit.svg) no-repeat top left;
+      background-size: 74px 73px;
+    }
+
+    &::after {
+      content: "ХИТ";
+      position: absolute;
+      top: 7px;
+      left: 6px;
+      width: 74px;
+      height: 73px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.price-table__title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.price-table__bill {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.price-table__cell {
+  position: relative;
+  padding-bottom: 18px;
+  padding-top: 17px;
+  padding-left: 22px;
+  padding-right: 68px;
+  background-color: #fff;
+  border-top-width: 0;
+  background-clip: padding-box;
+
+  &--title {
+    display: none;
+  }
+
+  &--yes {
+    background: url(../img/icon-yes.svg);
+    background-position: 95%;
+    background-repeat: no-repeat;
+    background-size: 31px 21px;
+    background-color: #fff;
+  }
+
+  &--no {
+    background: url(../img/icon-no.svg);
+    background-position: 95%;
+    background-repeat: no-repeat;
+    background-size: 27px 26px;
+    background-color: #fff;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .price__wrapper {
+    width: 660px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 88px;
+    padding-bottom: 68px;
+
+
+    &::before {
+      background-size: 100% 50px;
+    }
+  }
+
+  .price-table {
+    position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+  }
+
+  .price-table__head {
+    padding-top: 10px;
+    padding-bottom: 9px;
+    width: 25%;
+
+    &:first-child {
+      background-color: transparent;
+    }
+
+    &--title {
+      display: block;
+    }
+  }
+
+  .price-table__title {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  .price-table__bill {
+    font-size: 18px;
+  }
+
+  .price-table__cell {
+    position: relative;
+    padding: 10px;
+    padding-top: 10px;
+    background-color: #fff;
+    border-top-width: 0;
+    background-clip: padding-box;
+
+    &--title {
+      display: block;
+    }
+
+    &--yes {
+      background-position: center;
+    }
+
+    &--no {
+      background-position: center;
+    }
+  }
+
+  .price-table__cell p {
+    margin: 0;
+  }
+
+  .price-table__cell span {
+    display: none;
+  }
+
+  .price__control-list {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price__wrapper {
+    width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 140px;
+    padding-bottom: 96px;
+
+
+    &::before {
+      background-size: 100% 65px;
+    }
+  }
+
+  .price-table__title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+
+  .price-table__bill {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+
+  .price-table__cell {
+    font-size: 18px;
+    padding-top: 16px;
+    padding-bottom: 13px;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+}

@@ -1,0 +1,149 @@
+.filter-radio {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.filter-radio__title {
+  width: 250px;
+  padding-bottom: 15px;
+
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #d22856;
+  line-height: 30px;
+}
+
+.filter-radio__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px 35px;
+  box-sizing: border-box;
+}
+
+.filter-radio__item {
+  padding: 0;
+  padding-left: 60px;
+  padding-top: 5px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+  position: relative;
+  margin: 0;
+
+  margin-bottom: 40px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filter-radio__label {
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    background: #fff;
+    border: 2px solid #e5e5e5;
+
+    border-radius: 50%;
+
+    top: 0;
+    left: 0;
+
+    width: 39px;
+    height: 39px;
+  }
+
+  &:hover {
+
+    &::before {
+      border-color: #283645;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: #d22856;
+    }
+  }
+}
+
+
+.filter-radio__input:checked + .filter-radio__label {
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-color: #d22856;
+    border-radius: 50%;
+
+    top: 14px;
+    left: 14px;
+    width: 15px;
+    height: 15px;
+
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+
+  .filter-radio__title {
+    font-size: 14px;
+    line-height: 18px;
+    width: 375px;
+    padding-top: 15px;
+  }
+
+  .filter-radio__list {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .filter-radio__item {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-radio__title {
+
+    padding: 0;
+
+    &::before {
+      left: 145px;
+      width: 280px;
+    }
+
+    &::after {
+      right: 145px;
+      width: 280px;
+    }
+  }
+
+  .filter-radio__list {
+    width: auto;
+    margin: 0;
+    padding-left: 70px;
+  }
+
+  .filter-radio__item {
+    margin-bottom: 43px;
+    padding-top: 5px;
+  }
+}

@@ -1,0 +1,135 @@
+.button {
+  cursor: pointer;
+
+  display: block;
+  padding-top: 13px;
+  padding-right: 30px;
+  padding-bottom: 13px;
+  padding-left: 30px;
+
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  color: #ffffff;
+
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  border-radius: 30px;
+
+  transition: 0.3s;
+
+  &:hover {
+    text-decoration: none;
+
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: rgba(210, 40, 86, 1);
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.button-download {
+  font-size: 21px;
+  line-height: 21px;
+  padding: 14px 20px;
+}
+
+.button-upload {
+  border: 3px solid #d22856;
+  border-radius: 30px;
+  color: #d22856;
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 12px;
+
+  &:hover {
+    color: #fff;
+    background-color: #d22856;
+  }
+
+  &:active {
+    color: rgba(255,255,255,.3);
+  }
+}
+
+.button-reset {
+  border: 3px solid #283645;
+  border-radius: 30px;
+  color: #283645;
+  background-color: transparent;
+  opacity: .3;
+  width: 100%;
+
+  &:hover {
+    background-color: transparent;
+    border: 3px solid #283645;
+    color: #283645;
+    opacity: .5;
+  }
+
+  &:active {
+    background-color: #283645;
+    color: #ffffff;
+  }
+}
+
+.button-contest {
+  padding: 17px 30px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #2aab6d;
+
+  &:hover {
+    color: #fff;
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255,255,255,.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button-contest {
+    width: 50%;
+  }
+
+  .button-upload,
+  .button-reset {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button-upload {
+    margin-bottom: 0;
+    width: 182px;
+  }
+
+  .button-reset {
+    width: 182px;
+  }
+
+  .button-contest {
+    width: 300px;
+  }
+}
+
+
+
+
